@@ -1,6 +1,7 @@
 <template>
     <div class="lan-button">
         <span>{{$slots.default[0].text || '按钮'}}</span>
+        <!--<img src="../../../assets/a.jpg" />-->
     </div>
 </template>
 
@@ -19,5 +20,9 @@
         font-size: 14px;
         color:#fff;
         cursor: pointer;
+    }
+    img {
+        width: 20px;
+        height: 20px;
     }
 </style>

@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 const config = {
-  // mode: "development",
+  mode: "development",
   entry : {
     main : './index.js'
     // main : './src/components/button/index.js'
@@ -41,6 +41,17 @@ const config = {
         test: /\.html$/,
         // 负责引入img，从而能被url-loader进行处理
         loader: 'html-loader'
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [{
+          // loader : 'file-loader',
+          loader : 'url-loader',
+          options : {
+            esModule : false,
+            limit : 1000
+          }
+        }]
       }
     ]
   },

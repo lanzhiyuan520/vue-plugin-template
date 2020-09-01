@@ -1,7 +1,6 @@
 import LanButton from './Button'
 
 LanButton.install = vue => {
-  console.log(vue.component)
   vue.component(LanButton.name,LanButton)
 }
 
